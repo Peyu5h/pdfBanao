@@ -11,7 +11,7 @@ export default function Paragraph({ paragraph }: { paragraph: string }) {
 
   const words = paragraph.split(" ");
   return (
-    <p ref={container} className="text-xl max-w-6xl mx-auto relative">
+    <p ref={container} className="text-lg max-w-6xl mx-auto relative">
       {words.map((word, i) => {
         const start = i / words.length;
         const end = start + 1 / words.length;

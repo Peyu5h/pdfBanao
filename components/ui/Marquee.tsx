@@ -27,7 +27,7 @@ export default function InfinitetextOnScroll() {
       },
     });
 
-    tl.to(slider.current, { x: "-500px" });
+    // tl.to(slider.current, { x: "-500px" });
 
     animate();
   }, []);
@@ -52,16 +52,16 @@ export default function InfinitetextOnScroll() {
         <div ref={slider} className="relative whitespace-nowrap">
           <p
             ref={firstText}
-            className="relative m-0  text-6xl pr-[50px] font-bold leading-tight"
+            className="relative m-0  text-6xl  font-bold leading-tight"
           >
-            {`PDF BANAO - PDF BANAO - PDF BANAO - PDF BANAO - `}
+            {`${" "}PDF BANAO - PDF BANAO - PDF BANAO - PDF BANAO -${" "}`}
           </p>
 
           <p
             ref={thirdText}
-            className="absolute left-full top-0 m-0  text-6xl pr-[50px] font-bold leading-tight"
+            className="absolute left-full top-0 m-0  text-6xl  font-bold leading-tight"
           >
-            {`PDF BANAO - PDF BANAO - PDF BANAO - PDF BANAO - `}
+            {`${" "}PDF BANAO - PDF BANAO - PDF BANAO - PDF BANAO -${" "}`}
           </p>
         </div>
       </div>
