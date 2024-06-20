@@ -52,9 +52,9 @@ const DragNDrop = () => {
   return (
     <div>
       <div
-        className={`flex mt-8 relative justify-center items-center w-96 mx-auto h-64 border-2 ${
+        className={`flex  mt-8 relative justify-center items-center w-[22rem] mx-auto h-64 border-2 ${
           isDragActive ? "border" : "border-dashed"
-        }  rounded-lg p-5
+        }  rounded-2xl p-5
                 ${
                   isDragActive ? "bg-sky-50 border-sky-400" : "border-gray-300"
                 }`}
@@ -80,8 +80,8 @@ const DragNDrop = () => {
                       Browse
                     </span>
                   </span>
-                  <span className="text-[11px] font-thin text-center text-overlay  text-gray-400">
-                    Supported formats: png/pdf
+                  <span className="text-[11px] font-thin font-khand text-center text-overlay  text-gray-400">
+                    Maximum size: 25mb
                   </span>
                 </div>
               )}
@@ -102,13 +102,7 @@ const DragNDrop = () => {
             >
               <RxCross2 className="text-2xl" />
             </div>
-            {selectedFile.type === "image/png" ? (
-              <img
-                src={URL.createObjectURL(selectedFile)}
-                alt={selectedFile.name}
-                className="max-h-32 mx-auto mb-2"
-              />
-            ) : selectedFile.type === "application/pdf" ? (
+            {selectedFile.type === "application/pdf" ? (
               <div className="flex flex-col items-center">
                 <BiSolidFilePdf className="text-6xl text-red-500 mx-auto" />
               </div>

@@ -7,10 +7,11 @@ import { MaskText } from "../TextReveal/MaskText";
 const Uploader = () => {
   return (
     <div>
-      <div className="flex items-center justify-center mt-16">
+      <div className="flex items-center justify-center mt-16 pl-2">
         <div className="w-96 relative flex flex-col ">
           <div className="text-5xl font-koulen flex">
-            <MaskText param={"text-5xl"} phrase="An Ideal&nbsp;" />
+            <MaskText param={"text-5xl"} phrase="An&nbsp;" />
+            <MaskText param={"text-5xl"} phrase="Ideal&nbsp;" />
             <span className="text-grn">
               <MaskText phrase=" PDF " param={"text-5xl"} />
             </span>
