@@ -35,7 +35,7 @@ const ToolCard = (info: ToolCardProps) => {
   }
   return (
     <div>
-      <div className="card gap-y-2  flex flex-col h-28 w-28 bg-dark hover:bg-light duration-300 cursor-pointer rounded-3xl p-2  items-center justify-center text-grn">
+      <div className="card gap-y-2  select-none  flex flex-col h-28 w-28 bg-dark hover:bg-light duration-300 cursor-pointer rounded-3xl p-2  items-center justify-center text-grn">
         <div className="logo text-4xl">{logo}</div>
         <h1>{info.title}</h1>
       </div>

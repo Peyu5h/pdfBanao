@@ -47,7 +47,7 @@ export default function InfinitetextOnScroll() {
   };
 
   return (
-    <main className="relative flex my-8  overflow-hidden bg-dark">
+    <main className="relative flex mt-8 mb-4 overflow-hidden bg-dark">
       <div className="text-grn ">
         <div ref={slider} className="relative whitespace-nowrap">
           <p

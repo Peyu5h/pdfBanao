@@ -2,9 +2,9 @@ import Lottie from "lottie-react";
 import React from "react";
 import arrowLottie from "@/public/utils/arrowLottie.json";
 import DragNDrop from "../DragNDrop";
-import { MaskText } from "../ScrollTextReveal/MaskText";
+import { MaskText } from "../TextReveal/MaskText";
 
-const Section1 = () => {
+const Uploader = () => {
   return (
     <div>
       <div className="flex items-center justify-center mt-16">
@@ -34,4 +34,4 @@ const Section1 = () => {
   );
 };
 
-export default Section1;
+export default Uploader;
