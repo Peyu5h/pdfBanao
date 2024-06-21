@@ -25,9 +25,9 @@ const ToolCard = (info: ToolCardProps) => {
   } else if (title === "SCAN TO pdf") {
     logo = <LuFileScan />;
   } else if (title === "INSERT PG") {
-    logo = <TiDocumentAdd className="text-5xl" />;
+    logo = <TiDocumentAdd className=" text-2xl sm:text-5xl" />;
   } else if (title === "DELETE PG") {
-    logo = <TiDocumentDelete className="text-[44px] mb-1" />;
+    logo = <TiDocumentDelete className="text-2xl sm:text-[44px] mb-1" />;
   } else if (title === "PDF TO DOC") {
     logo = <BsFiletypeDoc />;
   } else if (title === "LOCK PDF") {
@@ -35,9 +35,9 @@ const ToolCard = (info: ToolCardProps) => {
   }
   return (
     <div>
-      <div className="card gap-y-2  select-none  flex flex-col h-28 w-28 bg-dark hover:bg-light duration-300 cursor-pointer rounded-3xl p-2  items-center justify-center text-grn">
-        <div className="logo text-4xl">{logo}</div>
-        <h1>{info.title}</h1>
+      <div className="card gap-y-2  select-none  flex flex-col sm:h-28 sm:w-28 h-20 w-20  bg-dark hover:bg-light duration-300 cursor-pointer rounded-3xl p-2  items-center justify-center text-grn">
+        <div className="logo text-2xl sm:text-4xl">{logo}</div>
+        <h1 className="sm:text-xl text-sm ">{info.title}</h1>
       </div>
     </div>
   );

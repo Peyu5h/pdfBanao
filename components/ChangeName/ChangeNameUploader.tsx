@@ -35,7 +35,7 @@ const ChangeNameUploader = () => {
 
   return (
     <div>
-      <div className="flex mt-8 justify-center items-center w-[22rem] mx-auto h-28 border-2 border-dashed rounded-2xl p-5">
+      <div className="flex mt-4 justify-center items-center w-[22rem] mx-auto h-28 lg:h-[12rem] border-2 border-dashed border-gray-300 rounded-2xl p-5">
         {!selectedPDF && (
           <>
             <label

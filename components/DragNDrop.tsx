@@ -52,12 +52,11 @@ const DragNDrop = () => {
   return (
     <div>
       <div
-        className={`flex  mt-8 relative justify-center items-center w-[22rem] mx-auto h-64 border-2 ${
+        className={`flex mt-8 relative justify-center items-center lg:w-[20rem] xl:w-[24rem] w-full lg:max-w-xl max-w-xs mx-auto h-64 border-2 ${
           isDragActive ? "border" : "border-dashed"
-        }  rounded-2xl p-5
-                ${
-                  isDragActive ? "bg-sky-50 border-sky-400" : "border-gray-300"
-                }`}
+        } rounded-2xl p-5 ${
+          isDragActive ? "bg-sky-50 border-sky-400" : "border-gray-300"
+        }`}
         onDragEnter={handleDragEnter}
         onDragLeave={handleDragLeave}
         onDragOver={(e) => e.preventDefault()}
@@ -71,7 +70,7 @@ const DragNDrop = () => {
         >
           {isDragActive
             ? "Leave Your File Here"
-            : selectedFile == null && (
+            : !selectedFile && (
                 <div className="flex flex-col gap-y-2">
                   <SlCloudUpload className="text-6xl text-gray-400 mx-auto" />
                   <span className="text-xl text-center">
@@ -80,7 +79,7 @@ const DragNDrop = () => {
                       Browse
                     </span>
                   </span>
-                  <span className="text-[11px] font-thin font-khand text-center text-overlay  text-gray-400">
+                  <span className="text-[11px] font-thin font-khand text-center text-overlay text-gray-400">
                     Maximum size: 25mb
                   </span>
                 </div>
@@ -107,7 +106,7 @@ const DragNDrop = () => {
                 <BiSolidFilePdf className="text-6xl text-red-500 mx-auto" />
               </div>
             ) : null}
-            <p className=" text-gray-700 mx-auto text-center text-xs mt-4">
+            <p className="text-gray-700 mx-auto text-center text-xs mt-4">
               {selectedFile.name}
             </p>
           </div>

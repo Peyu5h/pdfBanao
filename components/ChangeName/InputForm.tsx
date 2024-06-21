@@ -45,8 +45,11 @@ export function InputForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <div className="flex w-full justify-between">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-6 max-w-lg"
+      >
+        <div className="flex w-full justify-between gap-x-2">
           <FormField
             control={form.control}
             name="name"
@@ -78,7 +81,7 @@ export function InputForm() {
           />
         </div>
 
-        <div className="flex w-full justify-between">
+        <div className="flex w-full justify-between gap-x-2">
           <FormField
             control={form.control}
             name="rollno"

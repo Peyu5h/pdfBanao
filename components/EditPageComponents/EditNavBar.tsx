@@ -14,12 +14,12 @@ const EditNavBar = () => {
   const [activeTool, setActiveTool] = useState("edit");
   return (
     <div className="flex select-none justify-between items-center gap-x-1 text-grn">
-      <div className="backBTN cursor-pointer duration-300 w-14 h-14 flex items-center justify-center text-xl pr-1  rounded-[1.2rem] text-grn bg-dark">
+      <div className="backBTN cursor-pointer duration-300 w-14 h-14 flex items-center justify-center text-xl sm:pr-1  rounded-[1.2rem] text-darker sm:text-grn sm:bg-dark">
         <IoChevronBackOutline />
       </div>
       <div className="ToolBar flex-1">
-        <div className="h-14 w-full bg-dark rounded-[1.2rem] flex items-center ">
-          <div className="tools flex text-2xl p-2 gap-x-1">
+        <div className="h-14   rounded-[1.2rem] flex items-center ">
+          <div className="tools rounded-[1.2rem] bg-dark mx-auto flex text-2xl p-2 gap-x-1">
             <div
               onClick={() => setActiveTool("edit")}
               className={` cursor-pointer p-2 ${

@@ -1,9 +1,28 @@
-import React from "react";
+"use client";
 
-export default function RootLayout({
+import { AnimatePresence } from "framer-motion";
+import Lenis from "lenis";
+import { useEffect } from "react";
+
+export default function PageLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-  return <div className="p-4 h-screen">{children}</div>;
+}) {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
+  return (
+    <div className="">
+      <AnimatePresence mode="wait">{children}</AnimatePresence>
+    </div>
+  );
 }

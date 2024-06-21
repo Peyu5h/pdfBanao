@@ -11,13 +11,12 @@ const config = {
   prefix: "",
   theme: {
     screens: {
-      xss: "412px",
-      xs: "496px",
-      sm: "576px",
-      md: "768px",
-      lg: "984px",
-      lgg: "1093px",
-      xl: "1440px",
+      xs: "332px",
+      sm: "412px",
+      md: "530px",
+      lg: "756px",
+      xl: "984px",
+      xxl: "1440px",
     },
     container: {
       center: true,

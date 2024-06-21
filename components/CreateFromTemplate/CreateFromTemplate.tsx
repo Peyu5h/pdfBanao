@@ -7,7 +7,7 @@ const CreateFromTemplate = () => {
   return (
     <div>
       <div className="p-8 lg:p-8">
-        <h1 className="text-4xl">
+        <h1 className=" sm:text-4xl text-3xl">
           <MaskText phrase="CREATE PRACTICAL PDF" />
         </h1>
         <h2 className="ml-0.5 mb-2">

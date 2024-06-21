@@ -13,29 +13,24 @@ import { MaskText } from "@/components/TextReveal/MaskText";
 import ToolCard from "@/components/ToolCard";
 import Uploader from "@/components/section1/Section1";
 import Marquee from "@/components/ui/Marquee";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+
 import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
-    <div className="select-none">
-      <div className="p-4 lg:p-8">
+    <div className="select-none w-full">
+      <div className="p-4 lg:p-8 ">
         <Navbar />
         <Uploader />
       </div>
       <Marquee />
-      <AllTools />
-      <CreateFromTemplate />
-
-      <ChangeName />
+      <div className="px-0 xl:px-36">
+        <AllTools />
+        <CreateFromTemplate />
+        <ChangeName />
+      </div>
     </div>
   );
 };
 
-export default page;
+export default Page;

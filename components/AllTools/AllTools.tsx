@@ -6,7 +6,7 @@ const AllTools = () => {
   return (
     <div>
       <div className=" p-6 lg:p-8 text-xl">
-        <h1 className="text-4xl mb-6">
+        <h1 className="sm:text-4xl text-3xl mb-6">
           <MaskText phrase="TOOLS YOU NEED TO WORK WITH PDF " />
         </h1>
         <div className="flex gap-2 flex-wrap items-center justify-center">

@@ -23,18 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <body
-        className={`${inter.className} ${khand.className} ${koulen.className}`}
+        className={`${inter.className} ${khand.className} ${koulen.className} w-full h-full bg-bgColor text-darker`}
       >
-        <div className="font-koulen bg-bgColor h-auto text-darker">
-          {children}
-        </div>
+        <div className="font-koulen min-h-screen w-full ">{children}</div>
       </body>
     </html>
   );

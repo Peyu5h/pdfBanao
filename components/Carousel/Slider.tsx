@@ -106,14 +106,15 @@ export function Slider({}) {
   const pages = [Page1, Page2, Page3, Page4, Page5];
 
   return (
-    <Carousel className="w-full max-w-[26rem] mx-auto">
+    // max-w-[26rem]
+    <Carousel className="w-full  mx-auto">
       <CarouselContent className="-ml-1">
         {pages.map((Page, index) => (
-          <CarouselItem key={index} className="pl-1 basis-1/3">
+          <CarouselItem key={index} className="pl-1 basis-1/2 sm:basis-1/3">
             <div className="p-1">
-              <Card className="cursor-pointer">
-                <CardContent className="flex h-48 justify-center py-6 px-2">
-                  <div className="text-[8px] leading-snug font-inter font-light">
+              <Card className="cursor-pointer min-w-18">
+                <CardContent className="flex xss:h-48 h-40 lg:h-64 justify-center py-6 px-2">
+                  <div className="text-[8px] lg:text-[12px] leading-snug font-inter font-light">
                     <Page />
                   </div>
                 </CardContent>
