@@ -1,6 +1,6 @@
 "use client";
 
-import WebViewer from "@pdftron/webviewer";
+import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 
 export default function PDFViewer() {
@@ -10,24 +10,32 @@ export default function PDFViewer() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    if (viewer.current) {
-      WebViewer(
-        {
-          path: "/lib",
-          initialDoc: "/files/V2.pdf",
-          licenseKey: "5ijNS9YTFRyblscwOWMp",
-        },
-        viewer.current
-      ).then((inst) => {
-        instance.current = inst;
-      });
-    }
+    const loadWebViewer = async () => {
+      const WebViewer = (await import("@pdftron/webviewer")).default;
+      if (viewer.current) {
+        WebViewer(
+          {
+            path: "/lib",
+            initialDoc: "/files/V2.pdf",
+            licenseKey: "5ijNS9YTFRyblscwOWMp",
+            disabledElements: [
+              // "viewControlsButton",
+              // "viewControlsOverlay",
+              // "toolsOverlay",
+              // "ribbonsDropdown",
+              // "selectToolButton",
+              // "panToolButton",
+              // "leftPanelButton",
+              // "toggleNotesButton",
+              // "toolsHeader",
+            ],
+          },
+          viewer.current
+        );
+      }
+    };
+    loadWebViewer();
   }, []);
-  useEffect(() => {
-    if (instance.current) {
-      instance.current.loadDocument(`/files/V2.pdf`);
-    }
-  }, [show]);
 
   return (
     <div className="MyComponent">
