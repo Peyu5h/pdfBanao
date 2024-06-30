@@ -1,6 +1,5 @@
 "use client";
 
-// import webviewerMin from "@pdftron/pdfjs-express";
 import WebViewer from "@pdftron/webviewer";
 import { useEffect, useRef } from "react";
 
@@ -8,15 +7,16 @@ export default function PDFViewer() {
   const viewer = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    WebViewer(
-      {
-        path: "/lib",
-        initialDoc: "/files/V2.pdf",
-
-        licenseKey: "5ijNS9YTFRyblscwOWMp",
-      },
-      viewer.current
-    ).then((instance) => {});
+    if (viewer.current) {
+      WebViewer(
+        {
+          path: "/lib",
+          initialDoc: "/files/V2.pdf",
+          licenseKey: "5ijNS9YTFRyblscwOWMp",
+        },
+        viewer.current
+      ).then((instance) => {});
+    }
   }, []);
 
   return (
