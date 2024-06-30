@@ -1,10 +1,13 @@
 "use client";
 
 import WebViewer from "@pdftron/webviewer";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function PDFViewer() {
   const viewer = useRef<HTMLDivElement | null>(null);
+  const instance = useRef<any>(null);
+
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     if (viewer.current) {
@@ -15,24 +18,22 @@ export default function PDFViewer() {
           licenseKey: "5ijNS9YTFRyblscwOWMp",
         },
         viewer.current
-      )
-        .then((instance) => {
-          // Handle instance if needed
-        })
-        .catch((error) => {
-          console.error("Error initializing WebViewer:", error);
-        });
+      ).then((inst) => {
+        instance.current = inst;
+      });
     }
-
-    // Clean up if needed
-    return () => {
-      // Perform any cleanup if necessary
-    };
-  }, []); // Only run this effect once on mount
+  }, []);
+  useEffect(() => {
+    if (instance.current) {
+      instance.current.loadDocument(`/files/V2.pdf`);
+    }
+  }, [show]);
 
   return (
     <div className="MyComponent">
-      <div className="header">React sample</div>
+      <div onClick={() => setShow(!show)} className="header">
+        SHOW
+      </div>
       <div className="webviewer h-[40vh] w-screen" ref={viewer}></div>
     </div>
   );
