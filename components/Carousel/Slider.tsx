@@ -113,7 +113,7 @@ export function Slider({}) {
           <CarouselItem key={index} className="pl-1 basis-1/2 sm:basis-1/3">
             <div className="p-1">
               <Card className="cursor-pointer min-w-18">
-                <CardContent className="flex xss:h-48 h-40 lg:h-64 justify-center py-6 px-2">
+                <CardContent className="flex  xs:h-48 h-30 lg:h-64 justify-center py-6 px-2">
                   <div className="text-[8px] lg:text-[12px] leading-snug font-inter font-light">
                     <Page />
                   </div>

@@ -13,7 +13,7 @@ const ChangeName = () => {
         </h1>
 
         <h2 className="ml-0.5 text-lg text-dark">
-          <Paragraph paragraph="Only&nbsp;Upload&nbsp;PDF&nbsp;having&nbsp;any&nbsp;of&nbsp;5&nbsp;header&nbsp;from&nbsp;above." />
+          <MaskText phrase="Only&nbsp;Upload&nbsp;PDF&nbsp;having&nbsp;any&nbsp;of&nbsp;5&nbsp;header&nbsp;from&nbsp;above." />
         </h2>
         <div className="flex mx-auto gap-x-12 max-w-[56rem] flex-col justify-between items-center lg:flex-row-reverse gap-y-10">
           <ChangeNameUploader />
