@@ -15,9 +15,20 @@ export default function PDFViewer() {
           licenseKey: "5ijNS9YTFRyblscwOWMp",
         },
         viewer.current
-      ).then((instance) => {});
+      )
+        .then((instance) => {
+          // Handle instance if needed
+        })
+        .catch((error) => {
+          console.error("Error initializing WebViewer:", error);
+        });
     }
-  }, []);
+
+    // Clean up if needed
+    return () => {
+      // Perform any cleanup if necessary
+    };
+  }, []); // Only run this effect once on mount
 
   return (
     <div className="MyComponent">
